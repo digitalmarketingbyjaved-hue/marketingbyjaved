@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Marketing by Javed • Elite Digital Growth Agency</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0a0e27 100%);
+            color: #e8e9f3;
+            overflow-x: hidden;
+            font-family: 'Inter', sans-serif;
+            position: relative;
+        }
+
+        /* Animated Background Particles */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.15;
+        }
+
+        .particle {
+            position: absolute;
+            background: linear-gradient(135deg, #d4af37, #f4e5c3);
+            border-radius: 50%;
+            animation: float 20s infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); }
+            25% { transform: translateY(-100px) translateX(50px); }
+            50% { transform: translateY(-200px) translateX(-50px); }
+            75% { transform: translateY(-100px) translateX(100px); }
+        }
+
+        /* ========== LUXURIOUS NAV ========== */
+        nav {
+            position: fixed;
+            width: 100%;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10, 14, 39, 0.85);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            box-shadow: 0 8px 32px rgba(212, 175, 55, 0.1);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        nav h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 800;
+            font-size: 1.8rem;
+            background: linear-gradient(135deg, #d4af37 0%, #f4e5c3 50%, #d4af37 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            letter-spacing: 0.5px;
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+        }
+
+        /* ========== PREMIUM HERO SECTION ========== */
+        .hero {
+            padding: 180px 8% 120px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 68px;
+            font-weight: 900;
+            line-height: 1.15;
+            letter-spacing: -2px;
+            margin-bottom: 24px;
+            color: #ffffff;
+            text-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+        }
+
+        .luxury-highlight {
+            background: linear-gradient(135deg, #d4af37 0%, #f9d97a 50%, #d4af37 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            position: relative;
+            display: inline-block;
+        }
+
+        .luxury-highlight::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #d4af37, transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .prestige-tagline {
+            font-size: 1.35rem;
+            font-weight: 300;
+            color: #c0c5d8;
+            margin-bottom: 28px;
+            line-height: 1.6;
+            letter-spacing: 0.3px;
+            font-style: italic;
+        }
+
+        .prestige-tagline strong {
+            color: #d4af37;
+            font-weight: 600;
+        }
+
+        .typed-wrapper {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 28px 0 18px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .typed-text {
+            color: #d4af37;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(212, 175, 55, 0.05));
+            padding: 8px 20px;
+            border-radius: 50px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 4px 16px rgba(212, 175, 55, 0.2);
+        }
+
+        .btn-primary {
+            margin-top: 38px;
+            padding: 16px 42px;
+            border: 2px solid #d4af37;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #d4af37, #b8941f);
+            color: #0a0e27;
+            font-weight: 700;
+            font-size: 1.05rem;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 12px 32px rgba(212, 175, 55, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 48px rgba(212, 175, 55, 0.6);
+            background: linear-gradient(135deg, #f4e5c3, #d4af37);
+        }
+
+        /* FLOATING SKILL ICONS (Premium Animated) */
+        .floating-skills {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .skill-orb {
+            position: absolute;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(212, 175, 55, 0.05));
+            backdrop-filter: blur(10px);
+            padding: 14px 26px;
+            border-radius: 100px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #f4e5c3;
+            animation: floatOrb 15s infinite ease-in-out;
+        }
+
+        .skill-orb span:first-child {
+            font-size: 24px;
+            filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.6));
+        }
+
+        @keyframes floatOrb {
+            0%, 100% { transform: translateY(0) translateX(0) rotate(0deg); }
+            25% { transform: translateY(-30px) translateX(20px) rotate(5deg); }
+            50% { transform: translateY(-60px) translateX(-20px) rotate(-5deg); }
+            75% { transform: translateY(-30px) translateX(30px) rotate(3deg); }
+        }
+
+        .skill-orb:nth-child(1) { top: 15%; right: 15%; animation-delay: 0s; }
+        .skill-orb:nth-child(2) { top: 45%; right: 8%; animation-delay: 2s; }
+        .skill-orb:nth-child(3) { top: 75%; right: 20%; animation-delay: 4s; }
+        .skill-orb:nth-child(4) { top: 25%; right: 35%; animation-delay: 1s; }
+        .skill-orb:nth-child(5) { top: 60%; right: 40%; animation-delay: 3s; }
+        .skill-orb:nth-child(6) { top: 35%; right: 5%; animation-delay: 5s; }
+
+        /* HERO IMAGE WITH PROFESSIONAL PHOTO */
+        .hero-img {
+            flex: 1;
+            min-width: 320px;
+            position: relative;
+        }
+
+        .hero-img-container {
+            position: relative;
+            border-radius: 50%;
+            overflow: hidden;
+            width: 500px;
+            height: 500px;
+            border: 4px solid rgba(212, 175, 55, 0.4);
+            box-shadow: 0 0 60px rgba(212, 175, 55, 0.4), 
+                        inset 0 0 40px rgba(212, 175, 55, 0.1);
+            animation: pulseGlow 4s infinite;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 60px rgba(212, 175, 55, 0.4), inset 0 0 40px rgba(212, 175, 55, 0.1); }
+            50% { box-shadow: 0 0 90px rgba(212, 175, 55, 0.6), inset 0 0 60px rgba(212, 175, 55, 0.2); }
+        }
+
+        .hero-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.05);
+        }
+
+        /* Decorative rings around image */
+        .hero-img::before,
+        .hero-img::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            border: 2px solid rgba(212, 175, 55, 0.2);
+            animation: rotate 20s linear infinite;
+        }
+
+        .hero-img::before {
+            width: 520px;
+            height: 520px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .hero-img::after {
+            width: 550px;
+            height: 550px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation-direction: reverse;
+            animation-duration: 25s;
+        }
+
+        @keyframes rotate {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        /* ========== PREMIUM SERVICES SECTION ========== */
+        section {
+            padding: 90px 8%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 52px;
+            font-weight: 800;
+            margin-bottom: 58px;
+            text-align: center;
+            background: linear-gradient(135deg, #ffffff, #d4af37);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, #d4af37, transparent);
+        }
+
+        .services-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 36px;
+            margin-top: 40px;
+        }
+
+        .service-box {
+            background: linear-gradient(135deg, rgba(26, 31, 58, 0.6), rgba(10, 14, 39, 0.4));
+            backdrop-filter: blur(10px);
+            padding: 36px 30px;
+            border-radius: 28px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            transition: all 0.6s;
+            opacity: 0;
+        }
+
+        .service-box:hover::before {
+            opacity: 1;
+            top: -100%;
+            right: -100%;
+        }
+
+        .service-box:hover {
+            transform: translateY(-12px);
+            border-color: rgba(212, 175, 55, 0.6);
+            box-shadow: 0 24px 60px rgba(212, 175, 55, 0.3);
+        }
+
+        .service-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .service-header .icon {
+            font-size: 42px;
+            filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.6));
+        }
+
+        .service-box h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: #f4e5c3;
+        }
+
+        .service-desc {
+            font-size: 14.5px;
+            color: #b8bfd0;
+            margin: 16px 0 20px;
+            line-height: 1.6;
+        }
+
+        .service-box ul {
+            list-style: none;
+            margin: 20px 0 24px;
+        }
+
+        .service-box ul li {
+            font-size: 13.5px;
+            margin-bottom: 10px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            color: #c0c5d8;
+        }
+
+        .service-btn {
+            padding: 12px 28px;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #d4af37, #b8941f);
+            color: #0a0e27;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .service-btn:hover {
+            background: linear-gradient(135deg, #f4e5c3, #d4af37);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 28px rgba(212, 175, 55, 0.5);
+        }
+
+        /* ========== PREMIUM PROJECTS ========== */
+        .projects-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 64px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            background: linear-gradient(135deg, rgba(26, 31, 58, 0.5), rgba(10, 14, 39, 0.3));
+            backdrop-filter: blur(10px);
+            border-radius: 32px;
+            padding: 40px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(212, 175, 55, 0.5);
+            box-shadow: 0 28px 64px rgba(212, 175, 55, 0.2);
+        }
+
+        .project-card.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .project-img {
+            flex: 1;
+            max-width: 420px;
+            height: 280px;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+        }
+
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .project-card:hover .project-img img {
+            transform: scale(1.08);
+        }
+
+        .project-content {
+            flex: 1;
+        }
+
+        .project-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #f4e5c3;
+            margin-bottom: 10px;
+        }
+
+        .project-tag {
+            font-size: 13px;
+            font-weight: 600;
+            color: #d4af37;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .project-content p {
+            font-size: 15px;
+            color: #b8bfd0;
+            margin-bottom: 18px;
+            line-height: 1.6;
+        }
+
+        .project-content ul {
+            margin-bottom: 24px;
+            list-style: none;
+        }
+
+        .project-content ul li {
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #c0c5d8;
+        }
+
+        .project-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #d4af37, #b8941f);
+            color: #0a0e27;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .project-btn:hover {
+            background: linear-gradient(135deg, #f4e5c3, #d4af37);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 28px rgba(212, 175, 55, 0.5);
+        }
+
+        /* ========== STATS SECTION ========== */
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            gap: 36px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .stat {
+            flex: 1;
+            min-width: 200px;
+            background: linear-gradient(135deg, rgba(26, 31, 58, 0.6), rgba(10, 14, 39, 0.4));
+            backdrop-filter: blur(10px);
+            padding: 42px 24px;
+            border-radius: 28px;
+            text-align: center;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s;
+        }
+
+        .stat:hover {
+            transform: translateY(-8px);
+            border-color: rgba(212, 175, 55, 0.6);
+            box-shadow: 0 20px 50px rgba(212, 175, 55, 0.3);
+        }
+
+        .stat h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #d4af37, #f4e5c3);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 8px;
+        }
+
+        .stat p {
+            color: #c0c5d8;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            text-align: center;
+            padding: 48px 20px;
+            color: #8891a8;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            background: rgba(10, 14, 39, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        /* ========== FLOATING SOCIALS ========== */
+        .floating-socials {
+            position: fixed;
+            bottom: 35px;
+            right: 35px;
+            z-index: 1100;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: flex-end;
+        }
+
+        .float-main {
+            background: linear-gradient(135deg, #d4af37, #b8941f);
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 12px 32px rgba(212, 175, 55, 0.5);
+            transition: all 0.3s;
+            color: #0a0e27;
+            font-size: 30px;
+            font-weight: bold;
+            border: 2px solid rgba(212, 175, 55, 0.6);
+        }
+
+        .float-main:hover {
+            transform: scale(1.12) rotate(90deg);
+            background: linear-gradient(135deg, #f4e5c3, #d4af37);
+            box-shadow: 0 18px 42px rgba(212, 175, 55, 0.7);
+        }
+
+        .social-dropdown {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: 12px;
+            transition: all 0.3s;
+        }
+
+        .social-icon {
+            background: linear-gradient(135deg, rgba(26, 31, 58, 0.9), rgba(10, 14, 39, 0.7));
+            backdrop-filter: blur(10px);
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #d4af37;
+            font-size: 26px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-6px) scale(1.08);
+            background: linear-gradient(135deg, #d4af37, #b8941f);
+            color: #0a0e27;
+            border-color: #d4af37;
+            box-shadow: 0 14px 32px rgba(212, 175, 55, 0.5);
+        }
+
+        .hidden-menu {
+            display: none;
+        }
+
+        /* Fade Animation */
+        .fade {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.9s ease, transform 0.9s ease;
+        }
+
+        .fade.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .cursor-blink {
+            display: inline-block;
+            width: 3px;
+            background-color: #d4af37;
+            margin-left: 6px;
+            animation: blink 0.9s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1024px) {
+            .hero-img-container {
+                width: 400px;
+                height: 400px;
+            }
+            .hero-img::before { width: 420px; height: 420px; }
+            .hero-img::after { width: 450px; height: 450px; }
+            .skill-orb { font-size: 0.8rem; padding: 10px 18px; }
+        }
+
+        @media (max-width: 920px) {
+            .services-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .hero-text h1 {
+                font-size: 52px;
+            }
+            .typed-wrapper {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 140px;
+            }
+            .hero-text {
+                order: 2;
+            }
+            .hero-img {
+                order: 1;
+            }
+            .hero-img-container {
+                width: 320px;
+                height: 320px;
+            }
+            .hero-img::before { width: 340px; height: 340px; }
+            .hero-img::after { width: 370px; height: 370px; }
+            .floating-skills {
+                display: none;
+            }
+            .project-card {
+                flex-direction: column !important;
+                text-align: center;
+            }
+            .section-title {
+                font-size: 38px;
+            }
+            .floating-socials {
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Animated Background -->
+<div class="bg-animation">
+    <div class="particle" style="width: 4px; height: 4px; top: 20%; left: 10%; animation-duration: 18s;"></div>
+    <div class="particle" style="width: 6px; height: 6px; top: 60%; left: 80%; animation-duration: 22s; animation-delay: 2s;"></div>
+    <div class="particle" style="width: 3px; height: 3px; top: 80%; left: 30%; animation-duration: 20s; animation-delay: 4s;"></div>
+    <div class="particle" style="width: 5px; height: 5px; top: 40%; left: 60%; animation-duration: 25s; animation-delay: 1s;"></div>
+    <div class="particle" style="width: 4px; height: 4px; top: 70%; left: 50%; animation-duration: 19s; animation-delay: 3s;"></div>
+</div>
+
+<nav>
+    <h2>✦ Marketing by Javed</h2>
+</nav>
+
+<div class="hero">
+    <!-- Floating Skills Orbs -->
+    <div class="floating-skills">
+        <div class="skill-orb"><span>🌐</span> Web Dev</div>
+        <div class="skill-orb"><span>📱</span> Flutter Apps</div>
+        <div class="skill-orb"><span>📊</span> SEO Expert</div>
+        <div class="skill-orb"><span>📣</span> Social Growth</div>
+        <div class="skill-orb"><span>💰</span> Paid Ads</div>
+        <div class="skill-orb"><span>🧠</span> Strategy</div>
+    </div>
+
+    <div class="hero-text fade">
+        <h1>Transform Your Vision Into <span class="luxury-highlight">Digital Excellence</span></h1>
+        <p class="prestige-tagline">Where <strong>strategy meets execution</strong> — Elevating brands from 2X to 10X growth with precision & innovation</p>
+        <div class="typed-wrapper">
+            ✦ We Deliver <span class="typed-text" id="typedElement"></span><span class="cursor-blink"></span>
+        </div>
+        <button class="btn-primary" onclick="openWhatsApp('Elite Digital Services')">Begin Your Journey →</button>
+    </div>
+
+    <div class="hero-img fade">
+        <div class="hero-img-container">
+            <img src="background.jpeg" alt="Javed - Digital Marketing Expert">
+        </div>
+    </div>
+</div>
+
+<!-- PREMIUM SERVICES -->
+<section id="services">
+    <h2 class="section-title fade">Elite Services Portfolio</h2>
+    <div class="services-wrapper">
+        <div class="service-box fade" onclick="openWhatsApp('Website Development')">
+            <div class="service-header"><div class="icon">🌐</div><h3>Website Development</h3></div>
+            <p class="service-desc">Architecting digital experiences that convert visitors into customers. Performance-optimized, conversion-focused websites that dominate your market.</p>
+            <ul>
+                <li>✦ Bespoke Design Architecture</li>
+                <li>✦ Lightning-Fast Performance</li>
+                <li>✦ SEO Foundation Built-In</li>
+                <li>✦ Conversion Rate Optimization</li>
+                <li>✦ Premium UI/UX Experience</li>
+            </ul>
+            <button class="service-btn">Request Consultation →</button>
+        </div>
+
+        <div class="service-box fade" onclick="openWhatsApp('App Development')">
+            <div class="service-header"><div class="icon">📱</div><h3>App Development</h3></div>
+            <p class="service-desc">Enterprise-grade mobile applications engineered for scale. Flutter & Android solutions that redefine user engagement and business efficiency.</p>
+            <ul>
+                <li>✦ Cross-Platform Excellence</li>
+                <li>✦ Seamless API Integration</li>
+                <li>✦ Scalable Architecture</li>
+                <li>✦ Intuitive User Experience</li>
+                <li>✦ Performance Monitoring</li>
+            </ul>
+            <button class="service-btn">Request Consultation →</button>
+        </div>
+
+        <div class="service-box fade" onclick="openWhatsApp('SEO Services')">
+            <div class="service-header"><div class="icon">📊</div><h3>SEO Mastery</h3></div>
+            <p class="service-desc">Dominate search rankings with data-driven SEO strategies. We don't just improve rankings — we engineer sustainable organic growth.</p>
+            <ul>
+                <li>✦ Strategic Keyword Architecture</li>
+                <li>✦ Technical SEO Excellence</li>
+                <li>✦ Authority Link Building</li>
+                <li>✦ Content Optimization</li>
+                <li>✦ Performance Analytics</li>
+            </ul>
+            <button class="service-btn">Request Consultation →</button>
+        </div>
+
+        <div class="service-box fade" onclick="openWhatsApp('Social Media Marketing')">
+            <div class="service-header"><div class="icon">📣</div><h3>Social Media Excellence</h3></div>
+            <p class="service-desc">Build magnetic brand presence across platforms. Strategic content & engagement systems that transform followers into loyal advocates.</p>
+            <ul>
+                <li>✦ Strategic Content Planning</li>
+                <li>✦ Community Management</li>
+                <li>✦ Viral Growth Strategies</li>
+                <li>✦ Influencer Partnerships</li>
+                <li>✦ Analytics & Optimization</li>
+            </ul>
+            <button class="service-btn">Request Consultation →</button>
+        </div>
+
+        <div class="service-box fade" onclick="openWhatsApp('Paid Advertising')">
+            <div class="service-header"><div class="icon">💰</div><h3>Performance Advertising</h3></div>
+            <p class="service-desc">ROI-focused campaigns that scale your revenue. Precision-targeted Google & Meta ads engineered for maximum profitability.</p>
+            <ul>
+                <li>✦ Strategic Campaign Design</li>
+                <li>✦ Advanced Audience Targeting</li>
+                <li>✦ Conversion Funnel Optimization</li>
+                <li>✦ Real-Time ROI Tracking</li>
+                <li>✦ Continuous A/B Testing</li>
+            </ul>
+            <button class="service-btn">Request Consultation →</button>
+        </div>
+
+        <div class="service-box fade" onclick="openWhatsApp('Business Strategy')">
+            <div class="service-header"><div class="icon">🧠</div><h3>Growth Strategy</h3></div>
+            <p class="service-desc">Comprehensive digital roadmaps for exponential growth. From concept to execution — strategic planning that transforms businesses.</p>
+            <ul>
+                <li>✦ Market Analysis & Positioning</li>
+                <li>✦ Customer Journey Mapping</li>
+                <li>✦ Revenue Funnel Design</li>
+                <li>✦ Execution Frameworks</li>
+                <li>✦ Scaling Blueprints</li>
+            </ul>
+            <button class="service-btn">Request Consultation →</button>
+        </div>
+    </div>
+</section>
+
+<!-- PREMIUM PROJECTS -->
+<section id="projects">
+    <h2 class="section-title fade">Success Stories</h2>
+    <div class="projects-wrapper">
+        <div class="project-card fade">
+            <div class="project-img"><img src="suvidya.png" alt="Suvidya Institute"></div>
+            <div class="project-content">
+                <h3>Suvidya Institute Platform</h3>
+                <p class="project-tag">Education Technology | Complete Ecosystem</p>
+                <p>Comprehensive digital learning ecosystem integrating courses, live doubt sessions, and intelligent offer management — revolutionizing student engagement.</p>
+                <ul>
+                    <li>⚡ 60% Engagement Increase</li>
+                    <li>📱 Flutter Mobile Excellence</li>
+                    <li>🌐 SEO-Optimized Platform</li>
+                    <li>🔄 Real-Time Sync System</li>
+                </ul>
+                <a href="javascript:void(0)" onclick="openWhatsApp('Suvidya Institute Project')" class="project-btn">Explore Case Study →</a>
+            </div>
+        </div>
+
+        <div class="project-card reverse fade">
+            <div class="project-img"><img src="employeevibes.png" alt="EmployeeVibes HRMS"></div>
+            <div class="project-content">
+                <h3>EmployeeVibes HRMS</h3>
+                <p class="project-tag">Enterprise HRMS | Workforce Solution</p>
+                <p>Enterprise-grade workforce management platform with intelligent attendance tracking, performance analytics, and real-time operational insights.</p>
+                <ul>
+                    <li>📊 Advanced Analytics Dashboard</li>
+                    <li>👥 Comprehensive Employee Management</li>
+                    <li>⚙️ Scalable API Architecture</li>
+                    <li>📱 Cross-Platform Mobile App</li>
+                </ul>
+                <a href="javascript:void(0)" onclick="openWhatsApp('EmployeeVibes HRMS')" class="project-btn">Explore Case Study →</a>
+            </div>
+        </div>
+
+        <div class="project-card fade">
+            <div class="project-img"><img src="s2infotech.png" alt="S2 Infotech HRMS"></div>
+            <div class="project-content">
+                <h3>S2 Infotech HRMS</h3>
+                <p class="project-tag">Business Operations | Management System</p>
+                <p>Strategic workforce optimization platform streamlining operations, reporting frameworks, and performance measurement for business excellence.</p>
+                <ul>
+                    <li>📈 Intelligence Reporting System</li>
+                    <li>🔐 Enterprise Security Layer</li>
+                    <li>⚡ Performance-Optimized Backend</li>
+                    <li>💼 Business-Centric Interface</li>
+                </ul>
+                <a href="javascript:void(0)" onclick="openWhatsApp('S2 Infotech HRMS')" class="project-btn">Explore Case Study →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STATS -->
+<section>
+    <h2 class="section-title fade">Excellence in Numbers</h2>
+    <div class="stats">
+        <div class="stat fade">
+            <h2>200+</h2>
+            <p>Elite Projects Delivered</p>
+        </div>
+        <div class="stat fade">
+            <h2>9+</h2>
+            <p>Years of Mastery</p>
+        </div>
+        <div class="stat fade">
+            <h2>95%</h2>
+            <p>Client Satisfaction</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © <span id="currentYear"></span> Marketing by Javed — Elite Digital Growth Agency
+</footer>
+
+<!-- FLOATING SOCIALS -->
+<div class="floating-socials">
+    <div id="socialDropdown" class="social-dropdown hidden-menu">
+        <a href="https://wa.me/918850527116?text=Hello%20Marketing%20by%20Javed%2C%20I%27m%20interested%20in%20your%20elite%20services!" target="_blank" class="social-icon" aria-label="WhatsApp">💬</a>
+        <a href="https://www.instagram.com/marketingbyjaved" target="_blank" class="social-icon" aria-label="Instagram">📸</a>
+        <a href="https://www.linkedin.com/in/javed-marketing" target="_blank" class="social-icon" aria-label="LinkedIn">🔗</a>
+        <a href="mailto:hello@marketingbyjaved.com" class="social-icon" aria-label="Email">✉️</a>
+    </div>
+    <button id="floatingMainBtn" class="float-main">✦</button>
+</div>
+
+<script>
+    // ========== TYPEWRITER EFFECT ==========
+    const skillsArray = ["Elite Websites", "Powerful Apps", "SEO Dominance", "Social Excellence", "ROI-Driven Ads", "Growth Strategy"];
+    let skillIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typedSpan = document.getElementById("typedElement");
+    
+    function typeEffect() {
+        const currentSkill = skillsArray[skillIndex];
+        if (isDeleting) {
+            typedSpan.textContent = currentSkill.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            typedSpan.textContent = currentSkill.substring(0, charIndex + 1);
+            charIndex++;
+        }
+        if (!isDeleting && charIndex === currentSkill.length) {
+            isDeleting = true;
+            setTimeout(typeEffect, 2000);
+            return;
+        }
+        if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            skillIndex = (skillIndex + 1) % skillsArray.length;
+            setTimeout(typeEffect, 400);
+            return;
+        }
+        const speed = isDeleting ? 50 : 100;
+        setTimeout(typeEffect, speed);
+    }
+    typeEffect();
+
+    // ========== FLOATING SOCIAL TOGGLE ==========
+    const floatingBtn = document.getElementById("floatingMainBtn");
+    const dropdown = document.getElementById("socialDropdown");
+    floatingBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        dropdown.classList.toggle("hidden-menu");
+    });
+    
+    document.addEventListener("click", function(event) {
+        if (!floatingBtn.contains(event.target) && !dropdown.contains(event.target)) {
+            dropdown.classList.add("hidden-menu");
+        }
+    });
+    
+    // ========== FADE ANIMATION ==========
+    const faders = document.querySelectorAll('.fade');
+    const appearOptions = { threshold: 0.15, rootMargin: "0px 0px -20px 0px" };
+    const appearOnScroll = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+                appearOnScroll.unobserve(entry.target);
+            }
+        });
+    }, appearOptions);
+    faders.forEach(el => appearOnScroll.observe(el));
+
+    document.getElementById('currentYear').innerText = new Date().getFullYear();
+    
+    function openWhatsApp(service = "Elite Digital Services") {
+        const phone = "918850527116";
+        const message = `Hello Marketing by Javed! ✦ I'm interested in your *${service}*. Please share exclusive details & premium packages.`;
+        const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+        window.open(url, '_blank');
+    }
+</script>
+
+</body>
+</html>
